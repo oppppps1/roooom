@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>마스터키 노원점 | 방탈출 카페</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: "Noto Sans KR", sans-serif; background: #1e1e1e; color: #fff; }
+
+    .header {
+      position:fixed; top:0; left:0; width:100%; height:60px;
+      background:#111;
+      padding:0 32px;
+      display:flex; align-items:center; justify-content:space-between;
+      z-index:100;
+    }
+    .header .logo {
+      color:#FFC107;
+      font-size:1.5rem; font-weight:bold;
+      text-decoration:none;
+    }
+    .header nav ul {
+      list-style:none; display:flex; gap:24px;
+    }
+    .header nav a {
+      color:#fff;
+      text-decoration:none; font-size:1rem;
+      padding:8px 12px; border-radius:4px;
+      transition:background .2s, color .2s;
+    }
+    .header nav a:hover {
+      background:#FFC107; color:#111;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 100px auto 50px;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .theme {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 40px;
+      align-items: center;
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .theme img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+    .theme-description {
+      max-width: 600px;
+    }
+    .theme-description h2 {
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+    .theme-description p {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    .button {
+      display:inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #65a4b9;
+      color: #111;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .button:hover {
+      background: #417f8a;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="logo">방탈출 카페</a>
+    <nav>
+      <ul>
+        <li><a href="../theme.html">테마 찾기</a></li>
+        <li><a href="../reservation.html">예약·지점 안내</a></li>
+        <li><a href="../franchise.html">창업 문의</a></li>
+        <li><a href="../notice.html">공지사항</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>마스터키 노원점</h1>
+
+    <div class="theme">
+      <img src="../assets/branches/sherlock/theme6.jpg" alt="황금감옥 와캄">
+      <div class="theme-description">
+        <h2>황금감옥 와캄</h2>
+        <p>지금까지 봐왔던 감옥들과는 사뭇 다른 분위기의 낯선 감옥.<br>
+           그 안에서 펼쳐진 끝을 알 수 없는 새로운 이야기.<br>
+           이전까지 경험할 수 없었던 색다른 테마가 당신을 기다립니다.
+        </p>
+        <p><strong>난이도:</strong> ★★★☆☆ / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~6명</p>
+        <a class="button" href="../branches/sherlock.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/sherlock/theme3.jpg" alt="스토커">
+      <div class="theme-description">
+        <h2>스토커</h2>
+        <p>세간을 떠들석하게 만든 싸이코패스 납치범.<br>
+           그는 여자친구였던 사람과 닮은 사람만을 골라 납치하고 잔인하게 살해 한다고 한다.<br>
+           이런일이 남의 일인 줄로만 알았는데….당신의 여자친구가 실종된다.<br>
+           셜록홈즈 탐정소의 도움을 받아 납치범의 집을 찾게 되고, 그가 1시간 동안 자리를 비운다는 사실을 알게 된다.<br>
+           납치범이 집을 비운 시간 안에 여자친구를 구해 탈출하자!!
+        </p>
+        <p><strong>난이도:</strong> ★★★☆☆ 공포 / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~4명</p>
+        <a class="button" href="../branches/sherlock.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/sherlock/theme5.jpg" alt="지프리트의 심장">
+      <div class="theme-description">
+        <h2>지프리트의 심장</h2>
+        <p>[플리퍼 시티 에피소드 01] <br><br>
+           잊혀진 이야기 속에 전해지는 순수 에너지의 결정체 "지프리트의 심장"을 찾기 위해 플리퍼 시티를 헤매던 일행.<br>
+           마을 외곽의 한 골동품 점에서 가고자 하는 곳의 좌표를 알려준다는 검은 주사위를 얻는다.<br>
+           검은 주사위가 만들어 준 좌표를 통해 도착한 곳은 알 수 없는 낡은 기관실.<br>
+           그곳의 수수께끼를 풀고 지프리트의 심장을 찾아낼 수 있을까..?
+        </p>
+        <p><strong>난이도:</strong> ★★★★☆ / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~4명</p>
+        <a class="button" href="../branches/sherlock.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/sherlock/theme4.jpg" alt="파라오의 심판">
+      <div class="theme-description">
+        <h2>파라오의 심판</h2>
+        <p>람세스 3세의 보물을 훔치고 저주를 피해 무사히 탈출한 나<br>
+           더 많은 파라오 보물의 비밀을 알기 위해 이집트 국립 도서관으로 향하게 되는데...<br>
+           예기치 않는 모험이 시작 되어 버렸다!
+        </p>
+        <p><strong>난이도:</strong> ★★★★☆ 공포 / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~4명</p>
+        <a class="button" href="../branches/sherlock.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/sherlock/theme2.jpg" alt="미녀와 야수2">
+      <div class="theme-description">
+        <h2>미녀와 야수2</h2>
+        <p>야수와 미녀의 해피엔딩으로 끝난줄 만 알았던 동화속 야수의 성에서 살인사건이 발생했다.<br>
+           피해자는 바로 성주인 ‘야수’.<br>
+           사건 현장을 본 벨의 사촌동생 루시는 현장을 살펴보고 주변인들의 증언을 통해
+           야수의 부인 벨 , 성의 요리사 스타곤, 성의 하인 미세스팟, 그리고 미녀의 아버지 모리스등 네 명을 용의자로 지목한다.<br>
+           과연 성주인 ‘야수’를 죽인 범인은?
+        </p>
+        <p><strong>난이도:</strong> ★★★★☆ 공포 / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~6명</p>
+        <a class="button" href="../branches/sherlock.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/sherlock/theme1.jpg" alt="도둑들">
+      <div class="theme-description">
+        <h2>도둑들</h2>
+        <p>낯유명화가의 희귀품만 전시해서 그 가치가 높은 미술관 몽블랑,<br>
+           이곳은 보안으로도 유명해 한번도 도둑맞은 적이 없다.<br>
+           당신은 이곳을 털기위해 천재해커 빌리와 손을 잡게되고 빌리가 한시간동안 경비시스템을 마비시킬수 있다는데..<br>
+           자 주어진 시간은 한시간! 미션~~ 미술관을 털어라!
+        </p>
+        <p><strong>난이도:</strong> ★★★★☆ / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~6명</p>
+        <a class="button" href="../branches/sherlock.html">예 바로가기</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

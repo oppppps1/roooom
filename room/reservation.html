@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>예약·지점 안내 | 방탈출 카페</title>
+  <style>
+    /* reset */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:"Noto Sans KR",sans-serif; background:#1e1e1e; color:#fff; }
+
+    /* Header */
+    .header {
+      position:fixed; top:0; left:0; width:100%; height:60px;
+      background:#111; /* 원래 어두운 색 */
+      padding:0 32px;
+      display:flex; align-items:center; justify-content:space-between;
+      z-index:100;
+    }
+    .header .logo {
+      color:#FFC107; /* 기존 로고 색 */
+      font-size:1.5rem; font-weight:bold;
+      text-decoration:none;
+    }
+    .header nav ul {
+      list-style:none; display:flex; gap:24px;
+    }
+    .header nav a {
+      color:#fff; /* 기존 메뉴 색 */
+      text-decoration:none; font-size:1rem;
+      padding:8px 12px; border-radius:4px;
+      transition:background .2s, color .2s;
+    }
+    .header nav a:hover {
+      background:#FFC107; /* 호버 시 포인트 색 */
+      color:#111;
+    }
+
+    /* Main */
+    main {
+      padding:100px 20px; max-width:600px;
+      margin:0 auto; text-align:center;
+    }
+    h1 {
+      font-size:1.8rem; margin-bottom:30px;
+    }
+    select {
+      font-size:1.1rem; padding:10px 16px;
+      border:1px solid #ccc; border-radius:4px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">방탈출 카페</a>
+    <nav>
+      <ul>
+        <li><a href="theme.html">테마 찾기</a></li>
+        <li><a href="reservation.html">예약·지점 안내</a></li>
+        <li><a href="franchise.html">창업 문의</a></li>
+        <li><a href="notice.html">공지사항</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>예약·지점 안내</h1>
+    <select id="regionSelect">
+      <option value="">지점을 선택하세요</option>
+      <option value="masterkey">마스터키 노원점</option>
+      <option value="sherlock">셜록홈즈 노원점</option>
+      <option value="themaze">더메이즈 노원점</option>
+    </select>
+  </main>
+
+  <script>
+    // 지점 선택 시 해당 페이지로 이동
+    document.getElementById('regionSelect').addEventListener('change', function() {
+      const sel = this.value;
+      if (sel) {
+        window.location.href = `branches/${sel}.html`;
+      }
+    });
+  </script>
+</body>
+</html>

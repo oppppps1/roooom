@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>더메이즈 노원점 | 방탈출 카페</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: "Noto Sans KR", sans-serif; background: #1e1e1e; color: #fff; }
+
+    .header {
+      position:fixed; top:0; left:0; width:100%; height:60px;
+      background:#111;
+      padding:0 32px;
+      display:flex; align-items:center; justify-content:space-between;
+      z-index:100;
+    }
+    .header .logo {
+      color:#FFC107;
+      font-size:1.5rem; font-weight:bold;
+      text-decoration:none;
+    }
+    .header nav ul {
+      list-style:none; display:flex; gap:24px;
+    }
+    .header nav a {
+      color:#fff;
+      text-decoration:none; font-size:1rem;
+      padding:8px 12px; border-radius:4px;
+      transition:background .2s, color .2s;
+    }
+    .header nav a:hover {
+      background:#FFC107; color:#111;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 100px auto 50px;
+      padding: 20px;
+    }
+
+    .container h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .theme-box {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 40px;
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .theme-box img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .theme-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: 12px;
+    }
+
+    .theme-info p {
+      color: #65a4b9;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .theme-info .difficulty {
+      color: #fff;
+      font-weight: normal;
+      margin-bottom: 16px;
+    }
+
+    .reservation-times {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 16px;
+    }
+
+    .time-button {
+      background-color: #65a4b9;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 24px;
+      min-width: 110px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      line-height: 1.2;
+      transition: background 0.2s ease-in-out;
+      white-space: nowrap;
+    }
+
+    .time-button:hover {
+      background-color: #417f8a;
+    }
+
+    /* 공통 팝업 스타일 */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 200;
+    }
+
+    /* 팝업 내부 컨텐츠 스타일 */
+    .popup-content {
+      max-width: 400px;
+      background: #fff;
+      color: #000;
+      padding: 24px;
+      border-radius: 12px;
+    }
+
+    /* 숨김 처리할 팝업 내용 */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="logo">방탈출 카페</a>
+    <nav>
+      <ul>
+        <li><a href="../theme.html">테마 찾기</a></li>
+        <li><a href="../reservation.html">예약·지점 안내</a></li>
+        <li><a href="../franchise.html">창업 문의</a></li>
+        <li><a href="../notice.html">공지사항</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>더메이즈 노원점 테마 예약</h1>
+
+    <!-- 테마 1 -->
+    <div class="theme-box">
+      <img src="../assets/branches/themaze/theme4.jpg" alt="Secret Room" />
+      <div class="theme-info">
+        <p>#Secret Room</p>
+        <p class="difficulty">난이도 ★★★☆☆ / 2~6명</p>
+        <div class="reservation-times">
+          <button class="time-button">12:00<br>예약가능</button>
+          <button class="time-button">13:20<br>예약가능</button>
+          <button class="time-button">14:40<br>예약가능</button>
+          <button class="time-button">16:00<br>예약가능</button>
+          <button class="time-button">17:20<br>예약가능</button>
+          <button class="time-button">18:40<br>예약가능</button>
+          <button class="time-button">20:00<br>예약가능</button>
+          <button class="time-button">21:20<br>예약가능</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 테마 2 -->
+    <div class="theme-box">
+      <img src="../assets/branches/themaze/theme3.jpg" alt="상의원" />
+      <div class="theme-info">
+        <p>#상의원</p>
+        <p class="difficulty">난이도 ★★★☆☆ / 2~6명</p>
+        <div class="reservation-times">
+          <button class="time-button">12:20<br>예약가능</button>
+          <button class="time-button">13:40<br>예약가능</button>
+          <button class="time-button">15:00<br>예약가능</button>
+          <button class="time-button">16:20<br>예약가능</button>
+          <button class="time-button">17:40<br>예약가능</button>
+          <button class="time-button">19:00<br>예약가능</button>
+          <button class="time-button">20:20<br>예약가능</button>
+          <button class="time-button">21:40<br>예약가능</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 테마 3 -->
+    <div class="theme-box">
+      <img src="../assets/branches/themaze/theme1.jpg" alt="Lost the Prince" />
+      <div class="theme-info">
+        <p>#Lost the Prince</p>
+        <p class="difficulty">난이도 ★★★✮☆ / 2~6명</p>
+        <div class="reservation-times">
+          <button class="time-button">11:40<br>예약가능</button>
+          <button class="time-button">13:00<br>예약가능</button>
+          <button class="time-button">14:20<br>예약가능</button>
+          <button class="time-button">16:40<br>예약가능</button>
+          <button class="time-button">18:00<br>예약가능</button>
+          <button class="time-button">19:20<br>예약가능</button>
+          <button class="time-button">20:40<br>예약가능</button>
+          <button class="time-button">22:00<br>예약가능</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 테마 4 -->
+    <div class="theme-box">
+      <img src="../assets/branches/themaze/theme6.jpg" alt="탐정 in New York" />
+      <div class="theme-info">
+        <p>#탐정 in New York</p>
+        <p class="difficulty">난이도 ★★★✮☆ / 2~6명</p>
+        <div class="reservation-times">
+          <button class="time-button">12:00<br>예약가능</button>
+          <button class="time-button">13:20<br>예약가능</button>
+          <button class="time-button">14:40<br>예약가능</button>
+          <button class="time-button">16:00<br>예약가능</button>
+          <button class="time-button">17:20<br>예약가능</button>
+          <button class="time-button">18:40<br>예약가능</button>
+          <button class="time-button">20:00<br>예약가능</button>
+          <button class="time-button">21:20<br>예약가능</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 테마 5 -->
+    <div class="theme-box">
+      <img src="../assets/branches/themaze/theme7.jpg" alt="더 바틀샵 in 중계동" />
+      <div class="theme-info">
+        <p>#더 바틀샵 in 중계동</p>
+        <p class="difficulty">난이도 ★★★✮☆ / 2~6명</p>
+        <div class="reservation-times">
+          <button class="time-button">12:00<br>예약가능</button>
+          <button class="time-button">13:20<br>예약가능</button>
+          <button class="time-button">14:40<br>예약가능</button>
+          <button class="time-button">16:00<br>예약가능</button>
+          <button class="time-button">17:20<br>예약가능</button>
+          <button class="time-button">18:40<br>예약가능</button>
+          <button class="time-button">20:00<br>예약가능</button>
+          <button class="time-button">21:20<br>예약가능</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 테마 6 -->
+    <div class="theme-box">
+      <img src="../assets/branches/themaze/theme2.jpg" alt="상계동 357-8" />
+      <div class="theme-info">
+        <p>#상계동 357-8</p>
+        <p class="difficulty">난이도 ★★★★☆ 공포 / 2~4명</p>
+        <div class="reservation-times">
+          <button class="time-button">11:40<br>예약가능</button>
+          <button class="time-button">13:00<br>예약가능</button>
+          <button class="time-button">14:20<br>예약가능</button>
+          <button class="time-button">16:40<br>예약가능</button>
+          <button class="time-button">18:00<br>예약가능</button>
+          <button class="time-button">19:20<br>예약가능</button>
+          <button class="time-button">20:40<br>예약가능</button>
+          <button class="time-button">22:00<br>예약가능</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="theme-box">
+      <img src="../assets/branches/themaze/theme5.jpg" alt="No One" />
+      <div class="theme-info">
+        <p>#No One</p>
+        <p class="difficulty">난이도 ★★★★☆ / 2~6명</p>
+        <div class="reservation-times">
+          <button class="time-button">12:00<br>예약가능</button>
+          <button class="time-button">13:20<br>예약가능</button>
+          <button class="time-button">14:40<br>예약가능</button>
+          <button class="time-button">16:00<br>예약가능</button>
+          <button class="time-button">17:20<br>예약가능</button>
+          <button class="time-button">18:40<br>예약가능</button>
+          <button class="time-button">20:00<br>예약가능</button>
+          <button class="time-button">21:20<br>예약가능</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 테마 4 -->
+    <div class="theme-box">
+      <img src="../assets/branches/themaze/theme9.jpg" alt="DELETE (프리미엄테마)" />
+      <div class="theme-info">
+        <p>#DELETE (프리미엄테마)</p>
+        <p class="difficulty">난이도 ★★★★☆ / 2~6명</p>
+        <div class="reservation-times">
+          <button class="time-button">11:40<br>예약가능</button>
+          <button class="time-button">13:00<br>예약가능</button>
+          <button class="time-button">14:20<br>예약가능</button>
+          <button class="time-button">16:40<br>예약가능</button>
+          <button class="time-button">18:00<br>예약가능</button>
+          <button class="time-button">19:20<br>예약가능</button>
+          <button class="time-button">20:40<br>예약가능</button>
+          <button class="time-button">22:00<br>예약가능</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 테마 5 -->
+    <div class="theme-box">
+      <img src="../assets/branches/themaze/theme8.jpg" alt="디셈블(프리미엄테마)" />
+      <div class="theme-info">
+        <p>#디셈블(프리미엄테마)</p>
+        <p class="difficulty">난이도 ★★★★✮ / 2~6명</p>
+        <div class="reservation-times">
+          <button class="time-button">12:00<br>예약가능</button>
+          <button class="time-button">13:20<br>예약가능</button>
+          <button class="time-button">14:40<br>예약가능</button>
+          <button class="time-button">16:00<br>예약가능</button>
+          <button class="time-button">17:20<br>예약가능</button>
+          <button class="time-button">18:40<br>예약가능</button>
+          <button class="time-button">20:00<br>예약가능</button>
+          <button class="time-button">21:20<br>예약가능</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 테마 6 -->
+    <div class="theme-box">
+      <img src="../assets/branches/themaze/theme10.jpg" alt="골드(프리미엄테마)" />
+      <div class="theme-info">
+        <p>#골드(프리미엄테마)</p>
+        <p class="difficulty">난이도 ★★★★★ / 2~4명</p>
+        <div class="reservation-times">
+          <button class="time-button">12:20<br>예약가능</button>
+          <button class="time-button">13:40<br>예약가능</button>
+          <button class="time-button">15:00<br>예약가능</button>
+          <button class="time-button">16:20<br>예약가능</button>
+          <button class="time-button">17:40<br>예약가능</button>
+          <button class="time-button">19:00<br>예약가능</button>
+          <button class="time-button">20:20<br>예약가능</button>
+          <button class="time-button">21:40<br>예약가능</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- 날짜 선택 팝업 -->
+  <div class="popup" id="datePopup">
+    <div class="popup-content">
+      <h2>참가 날짜 선택</h2>
+      <input type="date" id="reservationDate" style="width: 100%; padding: 8px; margin: 16px 0;" />
+      <button id="dateConfirm" style="background:#FFC107; border:none; padding:10px 20px; border-radius:6px; font-weight:bold; width: 100%;">확인</button>
+      <button onclick="closeDatePopup()" style="margin-top: 10px; width: 100%;">취소</button>
+    </div>
+  </div>
+
+  <!-- 시간 선택 및 예약 폼 팝업 -->
+  <div class="popup" id="timePopup">
+    <div class="popup-content">
+      <h2>시간 선택 및 예약</h2>
+      <p>테마: <span id="selectedTheme"></span></p>
+      <p>날짜: <span id="selectedDate"></span></p>
+      <div id="availableTimes" class="reservation-times" style="margin-bottom: 20px;"></div>
+
+      <form id="reservationForm">
+        <label>선택 시간<br><input type="text" id="selectedTimeInput" readonly style="width:100%; margin-bottom:10px;" /></label><br>
+        <label>이용인원 선택<br>
+          <select id="participantCount" style="width:100%; margin-bottom:10px;">
+            <option>1명</option>
+            <option>2명</option>
+            <option>3명</option>
+            <option>4명</option>
+            <option>5명</option>
+          </select>
+        </label><br>
+        <label>예약자명<br><input type="text" id="reserverName" style="width:100%; margin-bottom:10px;" required /></label><br>
+        <label>연락처<br><input type="text" id="contact" placeholder="전화번호" style="width:100%; margin-bottom:10px;" required /></label><br>
+        <label>전달사항<br><textarea id="notes" style="width:100%; height:60px; margin-bottom:10px;"></textarea></label><br>
+        <label><input type="checkbox" id="privacyAgree" required /> 개인정보 처리방침 동의</label><br><br>
+        <button type="submit" style="background:#FFC107; border:none; padding:10px 20px; border-radius:6px; font-weight:bold;">예약하기</button>
+        <button type="button" onclick="closeTimePopup()" style="margin-left:8px;">닫기</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const datePopup = document.getElementById('datePopup');
+    const timePopup = document.getElementById('timePopup');
+    const reservationDateInput = document.getElementById('reservationDate');
+    const dateConfirmBtn = document.getElementById('dateConfirm');
+    const availableTimesDiv = document.getElementById('availableTimes');
+    const selectedThemeSpan = document.getElementById('selectedTheme');
+    const selectedDateSpan = document.getElementById('selectedDate');
+    const selectedTimeInput = document.getElementById('selectedTimeInput');
+
+    let chosenTheme = '';
+    let chosenDate = '';
+    let chosenTime = '';
+
+    // 1. 시간 버튼 클릭 시 날짜 선택 팝업 열기
+    document.querySelectorAll('.time-button').forEach(button => {
+      button.addEventListener('click', () => {
+        chosenTheme = button.closest('.theme-box').querySelector('.theme-info p').textContent.replace('#', '').trim();
+        // 저장해둔 시간(버튼 텍스트)
+        chosenTime = button.textContent.trim();
+
+        // 날짜 입력 초기화
+        reservationDateInput.value = '';
+        selectedTimeInput.value = '';
+
+        // 날짜 선택 팝업 보여주기
+        datePopup.style.display = 'flex';
+      });
+    });
+
+    // 2. 날짜 선택 후 확인 버튼 클릭
+    dateConfirmBtn.addEventListener('click', () => {
+      if (!reservationDateInput.value) {
+        alert('날짜를 선택해주세요.');
+        return;
+      }
+      chosenDate = reservationDateInput.value;
+
+      // 팝업 전환: 날짜 팝업 닫고 시간+예약 폼 팝업 열기
+      datePopup.style.display = 'none';
+
+      selectedThemeSpan.textContent = chosenTheme;
+      selectedDateSpan.textContent = chosenDate;
+
+      // 예약 가능 시간 표시 (여기서는 단순히 버튼 하나로 만들지만, 실제론 백엔드나 DB에서 해당 날짜 가능 시간 받아와야 함)
+      availableTimesDiv.innerHTML = ''; // 초기화
+
+      // 예시로 해당 테마 시간 버튼 하나만 생성 (실제로는 여러 시간 보여주면 됨)
+      // 여기서는 클릭한 시간 버튼 시간만 추가해둠
+      const timeBtn = document.createElement('button');
+      timeBtn.textContent = chosenTime;
+      timeBtn.className = 'time-button';
+      timeBtn.style.minWidth = 'auto';
+      timeBtn.style.padding = '6px 12px';
+      timeBtn.addEventListener('click', () => {
+        chosenTime = timeBtn.textContent;
+        selectedTimeInput.value = chosenTime;
+      });
+
+      availableTimesDiv.appendChild(timeBtn);
+
+      // 기본 선택 시간 셋팅
+      selectedTimeInput.value = chosenTime;
+
+      timePopup.style.display = 'flex';
+    });
+
+    // 팝업 닫기 함수들
+    function closeDatePopup() {
+      datePopup.style.display = 'none';
+    }
+    function closeTimePopup() {
+      timePopup.style.display = 'none';
+    }
+
+    // 팝업 바깥 클릭 시 닫기
+    window.addEventListener('click', (e) => {
+      if (e.target === datePopup) closeDatePopup();
+      if (e.target === timePopup) closeTimePopup();
+    });
+
+    // 예약 폼 제출
+    document.getElementById('reservationForm').addEventListener('submit', e => {
+      e.preventDefault();
+
+      // 간단한 유효성 검사
+      if (!selectedTimeInput.value) {
+        alert('시간을 선택해주세요.');
+        return;
+      }
+      if (!document.getElementById('reserverName').value.trim() || !document.getElementById('contact').value.trim()) {
+        alert('예약자명과 연락처를 입력해주세요.');
+        return;
+      }
+      if (!document.getElementById('privacyAgree').checked) {
+        alert('개인정보 처리방침에 동의해주세요.');
+        return;
+      }
+
+      alert(`예약이 완료되었습니다!\n
+테마: ${chosenTheme}\n
+날짜: ${chosenDate}\n
+시간: ${selectedTimeInput.value}`);
+
+      closeTimePopup();
+    });
+  </script>
+</body>
+</html>

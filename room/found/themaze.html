@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>마스터키 노원점 | 방탈출 카페</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: "Noto Sans KR", sans-serif; background: #1e1e1e; color: #fff; }
+
+    .header {
+      position:fixed; top:0; left:0; width:100%; height:60px;
+      background:#111;
+      padding:0 32px;
+      display:flex; align-items:center; justify-content:space-between;
+      z-index:100;
+    }
+    .header .logo {
+      color:#FFC107;
+      font-size:1.5rem; font-weight:bold;
+      text-decoration:none;
+    }
+    .header nav ul {
+      list-style:none; display:flex; gap:24px;
+    }
+    .header nav a {
+      color:#fff;
+      text-decoration:none; font-size:1rem;
+      padding:8px 12px; border-radius:4px;
+      transition:background .2s, color .2s;
+    }
+    .header nav a:hover {
+      background:#FFC107; color:#111;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 100px auto 50px;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .theme {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 40px;
+      align-items: center;
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .theme img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+    .theme-description {
+      max-width: 600px;
+    }
+    .theme-description h2 {
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+    .theme-description p {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    .button {
+      display:inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #65a4b9;
+      color: #111;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .button:hover {
+      background: #417f8a;
+
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="logo">방탈출 카페</a>
+    <nav>
+      <ul>
+        <li><a href="../theme.html">테마 찾기</a></li>
+        <li><a href="../reservation.html">예약·지점 안내</a></li>
+        <li><a href="../franchise.html">창업 문의</a></li>
+        <li><a href="../notice.html">공지사항</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>마스터키 노원점</h1>
+
+    <div class="theme">
+      <img src="../assets/branches/themaze/theme4.jpg" alt="Secret Room">
+      <div class="theme-description">
+        <h2>Secret Room</h2>
+        <p>귀하는 메이즈킹덤에 초대되셨습니다.<br>
+           메이즈킹덤 안에는 여러 다른 모양의 방들이 존재하고 있습니다.<br>
+           그 중에서도 아무도 본 적 없는 비밀의 방이 있다는 소문을 들어보셨을 텐데요,<br>
+           오늘 특별히 당신께 그 비밀의 방을 찾을 수 있는 기회를 드리겠습니다.<br>
+           단, 들어갈 때는 몰라도 마음대로 나올 수 없다는 점을 분명히 경고하겠습니다.<br>
+           선택은 온전히 당신에게 달렸습니다.<br>
+           이곳에 쓰여 있는 주소에 아무 때나 찾아와주시면 됩니다.<br>
+           기다리고 있겠습니다.
+        </p>
+        <p><strong>난이도:</strong> ★★★☆☆ / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~6명</p>
+        <a class="button" href="../branches/themaze.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/themaze/theme3.jpg" alt="상의원">
+      <div class="theme-description">
+        <h2>상의원</h2>
+        <p>기생의 옷을 만들던 나의 실력이 왕과 왕비의 귀에까지 들어가고,<br>
+           그들을 위해 만들어 바친 옷은 완벽하다는 평가를 받는다.<br><br>
+
+           그렇게 왕의 옷을 짓는 상의원 자리를 하사받아 입궐하게 되고,<br>
+           그 안에서 보지 말아야 할 왕의 비밀을 알게 되는데...
+        <p><strong>난이도:</strong> ★★★☆☆ 공포 / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~6명</p>
+        <a class="button" href="../branches/themaze.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/themaze/theme1.jpg" alt="Lost the Prince">
+      <div class="theme-description">
+        <h2>Lost the Prince</h2>
+        <p>지긋지긋 한 일상을 마친 날 기다리는 건 시궁창과도 같은 집이다.<br><br>
+
+           다음 생엔 돈 많고 멋진 귀족 집안에 태어나길!<br><br>
+
+           나의 아버지는 누군지 모른다.<br>
+           어머니는 나를 남겨두고 일찍 돌아가셨다.<br>
+           그녀는 내가 아주 귀한 사람이라고 했는데, 내 꼴을 보니<br>
+           그저 나를 위로하기 위한 어머니의 거짓말이었나보다.<br><br>
+
+           부숴질 것 같은 문을 열자, 식탁 위에 못보던 게 놓여 있다.<br><br>
+
+           “당신은 거지가 아닌 고귀한 혈통입니다.<br>
+           어머니께서 남겨 놓으신 비밀을 따라 가다보면<br>
+           진정한 신분을 확인 할 수 있습니다."<br><br>
+
+           뜬금없이 무슨 소리지? 정말 나에게 온 편지가 맞는 걸까?<br>
+           고민할 거 있나, 더 이상 잃을 것도 없는 삶이기에<br>
+           속는 셈치고 편지를 한 번 믿어 보기로 한다!
+        </p>
+        <p><strong>난이도:</strong> ★★★✮☆ / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~6명</p>
+        <a class="button" href="../branches/themaze.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/themaze/theme6.jpg" alt="탐정 in New York">
+      <div class="theme-description">
+        <h2>탐정 in New York</h2>
+        <p>탐정 존 메이즈 시리즈’ 첫 번째 이야기!<br>
+           어느 날 탐정 존 메이즈는 의문의 전화를 받는다.<br>
+           뉴욕의 유명 변호사인 피터가 긴급 체포되었다는 것!<br>
+           피터는 최근 뉴욕에서 벌어진 살인사건의 진범으로 잡혀 들어갔다는 것이다.<br>
+           정체불명의 남자는 주소 하나를 알려준다.<br>
+           그곳에 가면 피터의 누명을 벗길 수 있다는데.......<br><br>
+
+           존 메이즈는 흔쾌히 '그렉'의 도전을 받아들인다.<br>
+           탐정 존 메이즈는 그렉의 함정을 파헤치고 피터의 누명을 벗겨낼 수 있을 것인가!<br>
+        </p>
+        <p><strong>난이도:</strong> ★★★✮☆ / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~6명</p>
+        <a class="button" href="../branches/themaze.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/themaze/theme7.jpg" alt="더 바틀샵 in 중계동">
+      <div class="theme-description">
+        <h2>더 바틀샵 in 중계동</h2>
+        <p>맥주 제조장으로 유명한 베네딕트 수도원에서 어린 시절을 보낸 나는<br>
+           옥토버 광장의 보틀샵 <에일 슈바인>에서 소믈리에로 일하고 있다.<br><br>
+
+           세계적인 맥주의 콜렉터로 유명한 슈바인 사장은<br>
+           더바틀샵의 비밀 공간에서 지하조직과 암암리에 거래를 하고 있었고<br>
+           비자금에 연루되어 체포와 동시에 압수수색 조치가 내려졌다.<br><br>
+
+           1시간 뒤, 그들이 도착하기 전에<br>
+           내가 찾던 베네딕트 수도원의 ‘라 사그라(LA SAGRA)’를<br>
+           빼돌려야 한다.
+        </p>
+        <p><strong>난이도:</strong> ★★★✮☆ / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~6명</p>
+        <a class="button" href="../branches/themaze.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/themaze/theme2.jpg" alt="상계동 357-8">
+      <div class="theme-description">
+        <h2>상계동 357-8</h2>
+        <p>어릴 적 사고로 친부모님을 잃고 입양이 된 나는 어릴 적 기억이 없다.<br>
+           나를 낳아주신 부모님이 어떤 사람인지 항상 궁금했지만,<br>
+           주변에서 그 누구도 자세히 말해주지 않았다.<br>
+           사고의 후유증인지 지금도 자주 악몽을 꾼다.<br><br>
+
+           그러던 어느 날, 내 앞으로 이상한 편지가 도착했다.<br><br>
+
+           “너의 과거가 궁금하지 않나?”<br><br>
+
+           발신된 주소는 상계동 357-8.<br>
+           편지의 발신지는 15년 전 비극적인 일가족 살인사건이 벌여졌던 곳인데.......<br><br>
+
+           그런데 그곳은, 나의 악몽에서 보았던 그 집이었다.
+        </p>
+        <p><strong>난이도:</strong> ★★★★☆ 공포 / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~4명</p>
+        <a class="button" href="../branches/themaze.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/themaze/theme5.jpg" alt=" No One">
+      <div class="theme-description">
+        <h2> No One</h2>
+        <p>약혼녀가 죽었다. 내 차 안에서, 나와 함께 하던 퇴근길에.<br>
+           내 차를 덮친 트럭에서 내린 두 남자는 이렇게 말했다.<br><br>
+
+           “2명의 연구원을 처리했습니다.”<br><br>
+
+           나의 약혼녀는 '사무실로...'라는 말을 남긴 채 숨을 거두었다.<br>
+           가까스로 정신을 차리고, 의문의 남자들의 시선을 피해 현장을 빠져 나왔다.<br><br>
+
+           난 그녀가 남긴 말을 따라 사무실로 숨어 들었다.<br>
+           그녀는 무엇을 말하고 싶었던 걸까?<br>
+           우릴 헤치려 한 사람은 누구일까?<br><br>
+
+           그들은 내가 사라진 걸 금방 눈치챌 것이다. 주어진 시간이 많지 않다.<br>
+           불꺼진 사무실, 아무도 없는 이곳.
+
+           나는 살아서 이곳을 탈출할 수 있을까?
+        <p><strong>난이도:</strong> ★★★★☆ / <strong>시간:</strong> 60분 / <strong>인원:</strong> 2~6명</p>
+        <a class="button" href="../branches/themaze.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/themaze/theme9.jpg" alt="DELETE (프리미엄테마)">
+      <div class="theme-description">
+        <h2>DELETE (프리미엄테마)</h2>
+        <p>★서스펜스/드라마 테마★<br><br>'살인은 치료가 될 수 있습니다. 당신이 결심만 한다면요'
+        <p><strong>난이도:</strong> ★★★★☆ / <strong>시간:</strong> 70분 / <strong>인원:</strong> 2~6명</p>
+        <a class="button" href="../branches/themaze.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/themaze/theme8.jpg" alt="디셈블(프리미엄테마)">
+      <div class="theme-description">
+        <h2>디셈블(프리미엄테마)</h2>
+        <p>★스릴러/드라마 테마★<br><br>내가.. 도와줄게<br><br>※공포요소있음※
+        </p>
+        <p><strong>난이도:</strong> ★★★★✮ 공포 / <strong>시간:</strong> 70분 / <strong>인원:</strong> 2~6명</p>
+        <a class="button" href="../branches/themaze.html">예약 바로가기</a>
+      </div>
+    </div>
+
+    <div class="theme">
+      <img src="../assets/branches/themaze/theme10.jpg" alt="골드(프리미엄테마)">
+      <div class="theme-description">
+        <h2>골드(프리미엄테마)</h2>
+        <p>우연히 내 앞에 다가온 인생역전의 기회!<br><br>이 테마는 지정된 야외 공간을 이용합니다.<br>온도의 영향을 받을 수 있습니다.
+        </p>
+        <p><strong>난이도:</strong> ★★★★★ / <strong>시간:</strong> 70분 / <strong>인원:</strong> 2~4명</p>
+        <a class="button" href="../branches/themaze.html">예 바로가기</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

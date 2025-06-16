@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>창업 문의 | 방탈출 카페</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family:"Noto Sans KR",sans-serif;
+      background:#1e1e1e;
+      color:#fff;
+      scrollbar-gutter: stable; /* 스크롤바 공간을 항상 확보하여 내용 밀림 방지 */
+    }
+
+    .header {
+      position:fixed;
+      top:0; left:0;
+      width:100%; height:60px;
+      background:#111;
+      padding:0 32px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      z-index:100;
+    }
+    .header .logo {
+      font-size:1.5rem;
+      font-weight:bold;
+      text-decoration:none;
+      color:#FFC107;
+    }
+    .header nav ul {
+      list-style:none;
+      display:flex;
+      gap:24px;
+    }
+    .header nav a {
+      text-decoration:none;
+      color:#fff;
+      font-size:1rem;
+      padding:8px 12px;
+      border-radius:4px;
+      transition:background 0.2s, color 0.2s;
+    }
+    .header nav a:hover {
+      background:#FFC107;
+      color:#111;
+    }
+
+    main {
+      /* 헤더의 높이(60px)만큼 상단 패딩을 주어 내용이 가려지지 않게 함 */
+      padding: 60px 20px 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media(max-width:768px) {
+      .header { padding:0 16px; height:50px; }
+      main {
+        padding-top: 50px; /* 화면이 작아졌을 때 헤더 높이에 맞게 패딩 조정 */
+      }
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #fff;
+      padding-top: 40px; /* 기존 main의 padding-top:100px 효과를 비슷하게 유지 */
+    }
+
+    .cost-section { margin-bottom: 40px; }
+    .cost-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .cost-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      color: #333;
+    }
+    .cost-table th, .cost-table td {
+      border: 1px solid #ccc;
+      padding: 12px 8px;
+      text-align: center;
+    }
+    .cost-table th {
+      background: #f0f0f0;
+      font-weight: normal;
+    }
+    .cost-table td:first-child {
+      text-align: left;
+    }
+    .cost-table tr:nth-child(even) td {
+      background: #fafafa;
+    }
+
+    .inquiry {
+      background: #fff;
+      color: #333;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .inquiry label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .inquiry input, .inquiry select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .inquiry select {
+      -webkit-appearance: none;
+    }
+
+    .inquiry .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .inquiry .disclaimer {
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 16px;
+    }
+    .inquiry button {
+      width: 100%;
+      padding: 12px;
+      background: #FFC107;
+      color: #111;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .inquiry button:hover {
+      background: #e6ad06;
+    }
+
+    .contact {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    .contact div { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">방탈출 카페</a>
+    <nav>
+      <ul>
+        <li><a href="theme.html">테마 찾기</a></li>
+        <li><a href="reservation.html">예약·지점 안내</a></li>
+        <li><a href="franchise.html">창업 문의</a></li>
+        <li><a href="notice.html">공지사항</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>창업 문의</h1>
+
+    <section class="cost-section">
+      <h2>예상 창업 비용</h2>
+      <table class="cost-table">
+        <thead>
+          <tr><th>구분</th><th>기준금액</th><th>단위</th><th>45평·3테마</th><th>75평·6테마</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>가맹비</td><td>20,000원</td><td>1식</td><td>20,000원</td><td>20,000원</td></tr>
+          <tr><td>보증금</td><td>5,000원</td><td>1식</td><td>보험처리</td><td>보험처리</td></tr>
+          <tr><td>교육비</td><td>2,000원</td><td>-</td><td>2,000원</td><td>2,000원</td></tr>
+          <tr><td>테마 제작비</td><td>20,000원</td><td>개</td><td>60,000원</td><td>120,000원</td></tr>
+          <tr><td>인테리어</td><td>4,000원</td><td>평</td><td>240,000원</td><td>400,000원</td></tr>
+          <tr><td>POS 시스템</td><td>900원</td><td>1식</td><td>900원</td><td>900원</td></tr>
+          <tr><td>운영 소품</td><td>1,000원</td><td>1식</td><td>1,000원</td><td>1,000원</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <form class="inquiry" action="#" method="post">
+      <label for="name">성함</label>
+      <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required />
+
+      <label for="phone">전화번호</label>
+      <input type="tel" id="phone" name="phone" placeholder="전화번호를 입력하세요" required />
+
+      <label for="email">이메일</label>
+      <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required />
+
+      <label for="location">희망 지역</label>
+      <select id="location" name="location" required>
+        <option value="">지역을 선택하세요</option>
+        <option value="서울">서울</option>
+        <option value="경기">경기</option>
+        <option value="부산">부산</option>
+      </select>
+
+      <div class="checkbox">
+        <input type="checkbox" id="agree" required />
+        <label for="agree">개인정보 처리방침에 동의합니다.</label>
+      </div>
+
+      <p class="disclaimer">취소는 예약 접수 지점으로 문의해 주세요.<br>본사 창업문의: (중구 은행동 165-1 은행타워 5F)</p>
+      <button type="submit">문의하기</button>
+    </form>
+
+    <div class="contact">
+      <div>이메일: franchise@escapecafe.co.kr</div>
+      <div>전화: 02-1234-5678</div>
+    </div>
+  </main>
+</body>
+</html>
